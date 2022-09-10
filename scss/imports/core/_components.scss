@@ -1,0 +1,279 @@
+// css img, button, heading, title, input, elements, components...
+img {
+    max-width: 100%;
+    height: auto;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    &.--center {
+        margin: 0 auto;
+        display: block;
+    }
+}
+a {
+    text-decoration: none;
+}
+
+// colors (tuỳ chỉnh)
+.--white-cl {
+    color: $white-cl;
+}
+.--black-cl {
+    color: $black-cl;
+}
+.--blue-cl {
+    color: $blue-cl;
+}
+
+// css article (nội dung chi tiết bài viết)
+article {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        // font-family: ib; // font bold
+        display: block;
+    }
+    h1 {
+        font-size: var(--h1-fs);
+        line-height: var(--h1-lh);
+        margin: 0 0 0.67rem 0;
+    }
+    h2 {
+        font-size: var(--h2-fs);
+        line-height: var(--h2-lh);
+        margin: 0 0 0.75rem 0;
+    }
+    h3 {
+        font-size: var(--h3-fs);
+        line-height: var(--h3-lh);
+        margin: 0 0 0.83rem 0;
+    }
+    h4 {
+        font-size: var(--h4-fs);
+        line-height: var(--h4-lh);
+        margin: 0 0 1.12rem 0;
+    }
+    h5 {
+        font-size: var(--h5-fs);
+        line-height: var(--h5-lh);
+        margin: 0 0 1.5rem 0;
+    }
+    h6 {
+        font-size: 0.67rem;
+        margin: 0 0 1.67rem 0;
+    }
+
+    p {
+        margin: 0 0 1.12rem 0;
+    }
+    strong {
+        // font-family: ib; // font bold
+    }
+    ol,
+    ul {
+        list-style: initial;
+        padding-left: 18px;
+    }
+    img {
+        display: inline-block;
+        height: auto;
+        overflow: hidden;
+        border-radius: 10px;
+        margin: 25px auto;
+    }
+    .video {
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+        position: relative;
+        margin: 25px auto;
+        iframe,
+        video {
+            position: absolute;
+            @include size(100%);
+            top: 0;
+            left: 0;
+        }
+    }
+    @include xs {
+        img {
+            margin: 20px auto;
+        }
+    }
+}
+
+.heading {
+    font-family: ib;
+    &.--h1 {
+        font-size: var(--h1-fs);
+        line-height: var(--h1-lh);
+    }
+    &.--h2 {
+        font-size: var(--h2-fs);
+        line-height: var(--h2-lh);
+    }
+}
+
+.color-gradient {
+    background: -webkit-linear-gradient(#FFE25A, #F6C102);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.support-hotline {
+    @include midflex;
+        .support {
+            padding-right: 16px;
+            display: flex;
+            align-items: center;
+            border-right: 1px solid #FFFFFF;
+            height: 11px;
+            @include text(14px, Q, 18px, $white-cl, none);
+            font-weight: 400;
+        }
+    
+        .hotline {
+            padding: 0 16px;
+            @include text(14px, Q, 18px, $white-cl, none);
+            font-weight: 400;
+    
+            span {
+                @include text(14px, M, 18px, $white-cl, normal);
+                font-weight: 700;
+            }
+        }
+}
+
+.button {
+    cursor: pointer;
+        p {
+            width: max-content;
+            @include text(18px, Q, 27px, $black-cl, uppercase);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            padding: 16px 32px;
+            background: #FDD116;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+    
+        &:hover {
+            opacity: $o;
+            @include transition($t);
+        }
+}
+
+.titletop {
+    @include text(18px, Q, 22px, $white-text, uppercase);
+    letter-spacing: 0.05em;
+    font-weight: 700;
+}
+
+.heading2 {
+    @include text(60px, Q, 72px, $white-cl, none);
+    letter-spacing: -0.02em;
+    font-weight: 400;
+}
+
+.text-section {
+    @include text(24px, Q, 36px, #C2C2C2, none);
+    letter-spacing: -0.02em;
+    font-weight: 400;
+}
+
+.listitem {
+    @include midflex;
+    .desc {
+        padding: 16px;
+        @include text(24px, Q, 36px, #C2C2C2, none);
+        letter-spacing: -0.02em;
+        font-weight: 400;
+    }
+}
+
+.text-gradient {
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: -0.02em;
+    background: -webkit-linear-gradient(180deg,
+            #FFE25A 0%,
+            #F7C102 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card {
+    
+    span {
+        @include text(18px, Q, 27px, #DDDDDD, none);
+        padding-top: 26px;
+    }
+}
+
+.seemore {
+    span {
+        @include text(18px, Q, 27px, #377DFF, none);
+        letter-spacing: -0.02em;
+        font-weight: 600;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.title-row {
+    @include text(16px, Q, 20px, $black-hd, none);
+    letter-spacing: -0.02em;
+    font-weight: 600;
+}
+
+.fontuser {
+    @include text(16px, Q, 20px, #666666, none);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+
+.btnapp {
+    @include midflex;
+    background: $bg-black;
+    padding: 8px 20px;
+    border-radius: 10px;
+    .content {
+        padding-left: 16.13px;
+        p {
+            @include text(14px, Q, 25px, $white-cl, none);
+            font-weight: 300;
+        }
+        span {
+            @include text(20px, Q, 0, $white-cl, none);
+            font-weight: 600;
+        }
+    }
+    @include xs {
+        .content {
+            p {
+                font-size: 10px;
+                line-height: 10px;
+            }
+            span {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.title-footer {
+    @include text(14px, M, 24px, $white-cl, none);
+    font-weight: 700;
+}
+
+.desc-footer {
+    @include text(12px, M, 20px, $white-cl, none);
+        font-weight: 400;
+    padding-bottom: 12px;
+}

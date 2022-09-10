@@ -1,0 +1,106 @@
+.nav {
+    @include visible(0);
+    width: 100vw;
+    position: fixed;
+    background: $white-cl;
+    top: 32px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    @include transform(initial);
+    z-index: 300;
+    @include transition($t);
+    ul {
+        flex-direction: column;
+        position: absolute;
+        left: 16px;
+        top: -28px;
+        li {
+            margin: 32px auto;
+            a {
+                @include text(16px, Q, 20px, $bg-black, none);
+                font-weight: 400;
+                letter-spacing: -0.02em;
+                position: relative;
+                &::after {
+                    @include afterbefore(343px, 4px, $bg-black);
+                    top: 100%;
+                    left: 0%;
+                    @include transform(scaleX(0));
+                    @include transform-origin(left center);
+                    @include transition($t);
+                }
+            
+                &:hover {
+                    font-weight: 600;
+                    &::after {
+                        @include transform(scaleX(1));
+                        @include transform-origin(left center);
+                        @include transition($t);
+                    }
+                }
+            }
+        }
+    }
+    .other {
+        position: absolute;
+        top: 430px;
+        left: 16px;
+        .download {
+            display: flex;
+            padding-bottom: 16px;
+            p {
+                @include text(14px, Q, 18px, $black-hd, none);
+                font-weight: 400;
+            }
+            img {
+                padding: 0 14px;
+            }
+        }
+        .otherh {
+            .desc {
+                display: flex;
+                align-items: center;
+                border-right: 1px solid $black-hd;
+                color: $black-hd;
+                span {
+                color: $black-hd;
+                }
+                &:last-child {
+                    border-right: 0;
+                    
+                }
+            }
+            
+            
+        }
+    }
+    &.active {
+        @include visible(1);
+    }
+}
+
+.controls {
+    height: 3px;
+    width: 200px;
+    background: #e0dede;
+    border-radius: 10px;
+    position: relative;
+    bottom: 50px;
+    overflow: hidden;
+    top: 50%;
+    left: 100%;
+    transform: translate(0%, -50%);
+
+    .progress-bar {
+        width: 20px;
+        height: 100%;
+        background: $yellow-cl;
+        position: absolute;
+        left: 0;
+    }
+
+    @include xs {
+        width: 100px;
+    }
+}

@@ -1,0 +1,135 @@
+
+@font-face {
+    font-family: 'Qbr';
+    src: url('../fonts/QuicksandBold-Regular.woff2') format('woff2'),
+        url('../fonts/QuicksandBold-Regular.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Qb';
+    src: url('../fonts/QuicksandBook-Regular.woff2') format('woff2'),
+        url('../fonts/QuicksandBook-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Qbo';
+    src: url('../fonts/QuicksandBoldOblique-Regular.woff2') format('woff2'),
+        url('../fonts/QuicksandBoldOblique-Regular.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Qlo';
+    src: url('../fonts/QuicksandLightOblique-Regular.woff2') format('woff2'),
+        url('../fonts/QuicksandLightOblique-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Ql';
+    src: url('../fonts/QuicksandLight-Regular.woff2') format('woff2'),
+        url('../fonts/QuicksandLight-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Qd';
+    src: url('../fonts/QuicksandDash-Regular.woff2') format('woff2'),
+        url('../fonts/QuicksandDash-Regular.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Qo';
+    src: url('../fonts/QuicksandBookOblique-Regular.woff2') format('woff2'),
+        url('../fonts/QuicksandBookOblique-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Q';
+    src: url('../fonts/Quicksand-Regular.woff2') format('woff2'),
+        url('../fonts/Quicksand-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Mb';
+    src: url('../fonts/Manrope-Bold.woff2') format('woff2'),
+        url('../fonts/Manrope-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Meb';
+    src: url('../fonts/Manrope-ExtraBold.woff2') format('woff2'),
+        url('../fonts/Manrope-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'M';
+    src: url('../fonts/Manrope-Regular.woff2') format('woff2'),
+        url('../fonts/Manrope-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Ml';
+    src: url('../fonts/Manrope-Light.woff2') format('woff2'),
+        url('../fonts/Manrope-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Mm';
+    src: url('../fonts/Manrope-Medium.woff2') format('woff2'),
+        url('../fonts/Manrope-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Mel';
+    src: url('../fonts/Manrope-ExtraLight.woff2') format('woff2'),
+        url('../fonts/Manrope-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Msb';
+    src: url('../fonts/Manrope-SemiBold.woff2') format('woff2'),
+        url('../fonts/Manrope-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: fallback;
+}

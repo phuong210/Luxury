@@ -1,0 +1,143 @@
+.headerout {
+    background: $bg-black;
+    .container {
+        @include size(100%, 42px);
+        @include midflex;
+    }
+
+    &__right {
+        @include midflex;
+        p {
+            padding-right: 16px;
+            @include text(14px, Q, 18px, $white-cl, none);
+            font-weight: 400;
+        }
+        a {
+            padding-right: 16px;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    @include xs {
+        display: none;
+    }
+}
+
+.header {
+    height: var(--height-header);
+    width: 100%;
+    // position: fixed;
+    // @include fullscreen(true);
+    right: 0;
+    z-index: 300;
+
+    .container {
+        @include midflex;
+        padding: 35px 15px;
+    }
+    &.active {
+        position: fixed;
+        z-index: 300;
+        background: $white-cl;
+        width: 100%;
+        height: 95px;
+        top: -17px;
+        @include xs {
+            height: 50px;
+        }
+
+    }
+
+    &__menu {
+        ul {
+            @include midflex;
+
+            li {
+                height: 100%;
+
+                a {
+                    height: 100%;
+                    padding: 0 14px;
+                    @include text(16px, Q, 20px, $bg-black, none);
+                    font-weight: 400;
+                    @include transition($t);
+                    overflow: hidden;
+
+                    &:hover {
+                        color: $yellow-cl;
+                        @include transition($t);
+                    }
+                }
+            }
+        }
+    }
+    .btnmenu {
+        display: none;
+    }
+
+    @include xs {
+        .container {
+            padding: var(--pd-xs) 10px;
+        }
+        &__logo {
+            @include size(112.4px, 28px);
+        }
+        &__menu {
+            display: none;
+        }
+        .btnmenu {
+            display: block;
+            @include size(20.96px, 14.41px);
+            position: relative;
+            left: 1px;
+            cursor: pointer;
+            overflow: hidden;
+            span {
+                display: block;
+                height: 2px;
+                width: 100%;
+                background: $bg-black;
+                position: relative;
+                @include transition($t);
+        
+                &::before {
+                    @include afterbefore(10.96px, 2px, $bg-black);
+                    top: 5px;
+                    display: block;
+                }
+                &::after {
+                    @include afterbefore(20.96px, 2px, $bg-black);
+                    top: 5px;
+                    display: block;
+                }
+        
+                &::before {
+                    width: 20.96px;
+                    transform: translateY(0px);
+                    transform: translateX(10px);
+                }
+        
+                &::after {
+                    transform: translateY(5px);
+                }
+
+            }
+            &.active {
+                span {
+                    height: 0;
+
+                    &::after {
+                        @include transform(rotate(45deg));
+                    }
+
+                    &::before {
+                        transform: translateX(0px);
+                        @include transform(rotate(-45deg));
+
+                    }
+                }
+            }
+        }
+    }
+}
